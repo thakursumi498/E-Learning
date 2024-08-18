@@ -1,0 +1,839 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Basic styling for the entire document */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('bc.avif') no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero .hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+.hero-content h1 {
+    overflow: hidden; /* Ensures the content is hidden until the animation reveals it */
+    border-right: 0.15em solid #ffffff; /* Adds the cursor */
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    margin: 0 auto; /* Centers the text */
+    letter-spacing: 0.15em; /* Adds a little space between each letter */
+    animation: typing 10s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+
+
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background: #ff6f61;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: #ff4b41;
+}
+
+/* Navigation Section */
+.main-nav {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+.main-nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.auth a {
+    margin-left: 1rem;
+}
+
+.btn-secondary {
+    background: #eee;
+    color: #333;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-secondary:hover {
+    background: #ddd;
+}
+
+/* Courses Overview Section */
+.courses-overview {
+    background: url(e-learning-icon-robotic-hand-innovative-online-education-internet-technology-concept-webinar-teaching-online-training-courses-skill-development-vector-illustration_127544-1676.avif);
+    padding: 2rem 0;
+    /* margin-top: 120px; */
+}
+
+.courses-overview .container {
+    text-align: center;
+}
+
+.courses-overview h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.courses-overview p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.courses-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.course-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-content {
+    padding: 1rem;
+}
+
+.course-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.course-content p {
+    margin-bottom: 1rem;
+}
+
+.course-content .btn-secondary {
+    display: inline-block;
+    background: #ff6f61;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.course-content .btn-secondary:hover {
+    background: #ff4b41;
+}
+.course-details-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+.modal-content p {
+    margin: 10px 0;
+}
+
+.modal-content strong {
+    font-weight: bold;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Courses Grid */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Course Card */
+  .course-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+  }
+  
+  .course-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .course-card h3 {
+    margin: 15px 0 10px;
+    font-size: 20px;
+  }
+  
+  .course-card p {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  .learn-more-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover, .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .enroll-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .enroll-btn:hover {
+    background-color: #218838;
+  }
+  
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 2rem 0;
+}
+
+.why-choose-us .container {
+    text-align: center;
+}
+/* General styling for the Features section */
+#features {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+#features h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjust gap between items */
+}
+
+.feature-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px; /* Set a maximum width */
+}
+
+.feature-item img {
+    width: 100%; /* Ensure images fit the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 120px; /* Set a maximum width for images */
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #333;
+}
+
+.feature-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* Testimonials Carousel Section */
+.testimonials-carousel {
+    background: #f1f1f1;
+    padding: 2rem 0;
+}
+
+.testimonials-carousel .container {
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    overflow: auto;
+    gap: 2rem;
+}
+
+.carousel-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-item h4 {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* CSS for About Us Section */
+.about-us {
+    background: #f4f4f4;
+    padding: 50px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.about-content {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-left 15s linear infinite;
+}
+
+.about-item {
+    display: inline-block;
+    width: 300px;
+    margin-right: 30px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 20px;
+}
+
+.about-item img {
+    width: 100%;
+    height: auto;
+}
+
+.about-text {
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-text h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.about-text p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Add a wrapper for the moving effect to ensure the content doesn’t overlap */
+.about-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+/* 
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+} */
+
+
+/* Subscription Section */
+.subscription {
+    background: #ff6f61;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.subscription h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.subscription p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.subscription form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.subscription input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+}
+
+.subscription button {
+    background: #fff;
+    color: #ff6f61;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscription button:hover {
+    background: #f9f9f9;
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+}
+
+.footer-links,
+.footer-about,
+.footer-contact {
+    flex: 1;
+    margin: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ff6f61;
+}
+
+.footer-bottom {
+    text-align: center;
+    background: #222;
+    padding: 1rem 0;
+}
+
+.footer-bottom p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom ul {
+    list-style: none;
+}
+
+.footer-bottom ul li {
+    display: inline;
+    margin: 0 0.5rem;
+}
+
+.footer-bottom ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* General Hover Effect for Boxes */
+.course-item, .course-card, .feature-item, .about-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.course-item:hover, .course-card:hover, .feature-item:hover, .about-item:hover {
+    transform: translateY(-10px); /* Moves the box up slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increases shadow for a lift effect */
+}
+
+/* Hover Effect for Buttons inside Boxes */
+.course-content .btn-secondary:hover, .learn-more-btn:hover, .enroll-btn:hover {
+    background-color: #ff4b41; /* Darker background on hover */
+}
+
+
+/* Navigation Styles */
+/* Navigation Bar Styles */
+.main-nav {
+    background-color: #333; /* Adjust as needed */
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.main-nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-nav .logo img {
+    height: 50px; /* Adjust logo height as needed */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.auth {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary color */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Secondary color */
+}
+
+/* Hero Section */
+.hero {
+    /* background: #2980b9; Darker Blue */
+    color: #fff; /* Button Text Color */
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.hero .hero-content h1 {
+    font-size: 2.5rem;
+}
+
+.hero .hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Courses Overview Section */
+.courses-overview {
+    background: #fff; /* Modal Background Color */
+    color: #333; /* Text Color */
+    padding: 2rem 1rem;
+}
+
+.courses-grid {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff; /* Modal Background Color */
+    color: #333; /* Modal Text Color */
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* About Us Section */
+.about-us {
+    background: #f4f4f4; /* Background Color */
+    padding: 2rem 1rem;
+}
+
+/* Subscription Section */
+.subscription {
+    background:rgb(0 107 179); /* Primary Color */
+    color: #fff; /* Button Text Color */
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.subscription form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Footer Styles */
+footer {
+    background: #2c3e50; /* Dark Gray */
+    color: #fff; /* Button Text Color */
+    padding: 2rem 1rem;
+    margin-top: 33px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content .footer-about,
+.footer-content .footer-links,
+.footer-content .footer-contact {
+    width: 30%;
+}
+
+.footer-content a {
+    color: #3498db; /* Primary Color */
+}
+
+.footer-bottom {
+    background: #1a252f; /* Darker Gray */
+    padding: 1rem 0;
+    text-align: center;
+}
+html {
+    scroll-behavior: smooth;
+}
+

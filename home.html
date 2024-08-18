@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnify - Your Learning Journey Begins Here</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <!-- Navigation Section -->
+  <nav class="main-nav">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="" alt="">Learnify</a> <!-- Logo Image -->
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses-overview">Courses</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="auth">
+            <a href="login.html" class="btn-secondary">Login</a>
+            <a href="signup.html" class="btn-primary">Sign Up</a>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Unlock Your Potential with Learnify</h1>
+            <p>Join our community of learners and start your journey to success today.</p>
+            <a href="signup.html" class="btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Courses Overview Section -->
+    <section class="courses-overview" id="courses-overview">
+        <div class="container">
+            <h2>Our Popular Courses</h2>
+            <p>Explore our top-rated courses and start learning today.</p>
+            <div class="courses-grid">
+                <!-- DSA Course -->
+                <div class="course-item" onclick="showCourseDetails('DSA')">
+                    <img src="DSA.png" alt="DSA Course">
+                    <div class="course-content">
+                        <h3>DSA Mastery</h3>
+                        <p>Learn Data Structures and Algorithms to enhance your problem-solving skills.</p>
+                        <p><strong>Duration:</strong> 12 weeks</p>
+                        <a href="#" class="btn-secondary" onclick="showCourseDetails('DSA')">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Data Analytics Course -->
+                <div class="course-item" onclick="showCourseDetails('DataAnalytics')">
+                    <img src="Model-Data-Analytics.jpg" alt="Data Analytics Course">
+                    <div class="course-content">
+                        <h3>Data Analytics</h3>
+                        <p>Master the art of data analysis to uncover insights and drive decisions.</p>
+                        <p><strong>Duration:</strong> 16 weeks</p>
+                        <a href="#" class="btn-secondary" onclick="showCourseDetails('DataAnalytics')">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Full-Stack Course -->
+                <div class="course-item" onclick="showCourseDetails('FullStack')">
+                    <img src="Full.png" alt="Full-Stack Course">
+                    <div class="course-content">
+                        <h3>Full-Stack Development</h3>
+                        <p>Become a Full-Stack Developer with this complete course.</p>
+                        <p><strong>Duration:</strong> 16 weeks</p>
+                        <a href="#" class="btn-secondary" onclick="showCourseDetails('FullStack')">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="course-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCourseDetails()">&times;</span>
+            <div class="course-details">
+                <h2 id="course-title">Course Title</h2>
+                <p id="teacher-details">Instructor: Name</p>
+                <p id="course-price">Price: $0</p>
+                <p id="course-rating">Rating: 0/5</p>
+                <p id="course-duration">Duration: 0 weeks</p>
+                <p id="course-description">Course Description</p>
+                <p id="course-objectives">Objectives: </p>
+                <p id="course-prerequisites">Prerequisites: </p>
+                <p id="course-learning-outcomes">What You'll Learn: </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Features Section -->
+    <section id="features" class="why-choose-us">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <img src="11.png" alt="Feature 1">
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from the best in the industry with years of experience.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="12.png" alt="Feature 2">
+                    <h3>Interactive Learning</h3>
+                    <p>Engage with interactive content and hands-on projects.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="13.jpg" alt="Feature 3">
+                    <h3>Flexible Schedules</h3>
+                    <p>Study at your own pace with flexible course timings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-us">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-items">
+                <div class="about-item">
+                    <img src="3.jpg" alt="Team Member 1">
+                    <div class="about-text">
+                        <h3>Sumit Thakur</h3>
+                        <p>Co-Founder and CEO</p>
+                    </div>
+                </div>
+                <div class="about-item">
+                    <img src="3.jpg" alt="Team Member 2">
+                    <div class="about-text">
+                        <h3>Chaitanya Sharma</h3>
+                        <p>Chief Technology Officer</p>
+                    </div>
+                </div>
+                <div class="about-item">
+                    <img src="3.jpg" alt="Team Member 3">
+                    <div class="about-text">
+                        <h3>Gaurav kapoor</h3>
+                        <p>Head of Content</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="subscription">
+        <div class="container">
+            <h2>Stay Connected</h2>
+            <p>Subscribe to our newsletter for the latest updates and offers.</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>About Learnify</h3>
+                    <p>Your partner in learning with a range of high-quality courses designed for all levels.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses-overview">Courses</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@learnify.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <p>&copy; 2024 Learnify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   <script>
+   function showCourseDetails(course) {
+    var title, teacher, price, rating, duration, description, objectives, prerequisites, learningOutcomes;
+
+    switch (course) {
+        case 'DSA':
+            title   = 'DSA Mastery';
+            teacher = 'Instructor: John Doe';
+            price = 'Price: $299';
+            rating = 'Rating: 4.8/5';
+            duration = 'Duration: 12 weeks';
+            description = 'This course covers essential Data Structures and Algorithms for problem-solving and interview preparation.';
+            objectives = 'Understand fundamental data structures and algorithms; Improve problem-solving skills; Prepare for technical interviews.';
+            prerequisites = 'Basic programming knowledge in any language.';
+            learningOutcomes = 'Master data structures like arrays, stacks, queues, linked lists, trees, and graphs; Solve complex algorithmic problems efficiently.';
+            break;
+
+        case 'DataAnalytics':
+            title = 'Data Analytics';
+            teacher = 'Instructor: Jane Doe';
+            price = 'Price: $399';
+            rating = 'Rating: 4.9/5';
+            duration = 'Duration: 16 weeks';
+            description = 'Master the art of data analysis to uncover insights and drive decisions in this comprehensive course.';
+            objectives = 'Analyze and interpret data; Use data visualization tools; Make data-driven decisions.';
+            prerequisites = 'Basic knowledge of statistics and Excel.';
+            learningOutcomes = 'Become proficient in data analysis tools and techniques; Learn to present data insights clearly.';
+            break;
+
+        case 'FullStack':
+            title = 'Full-Stack Development';
+            teacher = 'Instructor: Jane Doe';
+            price = 'Price: $399';
+            rating = 'Rating: 4.9/5';
+            duration = 'Duration: 16 weeks';
+            description = 'Learn to build web applications from scratch, covering both front-end and back-end development.';
+            objectives = 'Develop full-stack web applications; Understand front-end and back-end technologies; Build and deploy real-world applications.';
+            prerequisites = 'Basic understanding of HTML, CSS, and JavaScript.';
+            learningOutcomes = 'Gain expertise in technologies like React, Node.js, Express, and databases; Build comprehensive web applications.';
+            break;
+
+        case 'CyberSecurity':
+            title = 'Cyber Security';
+            teacher = 'Instructor: Alice Smith';
+            price = 'Price: $349';
+            rating = 'Rating: 4.7/5';
+            duration = 'Duration: 14 weeks';
+            description = 'Gain the skills to protect networks, systems, and data from cyber threats in this comprehensive course.';
+            objectives = 'Learn to identify and mitigate security threats; Implement security measures to protect information systems.';
+            prerequisites = 'Basic IT knowledge and familiarity with networking concepts.';
+            learningOutcomes = 'Develop skills in network security, ethical hacking, and risk management; Prepare for cybersecurity certifications.';
+            break;
+    }
+
+    document.getElementById('course-title').innerText = title;
+    document.getElementById('teacher-details').innerText = teacher;
+    document.getElementById('course-price').innerText = price;
+    document.getElementById('course-rating').innerText = rating;
+    document.getElementById('course-duration').innerText = duration;
+    document.getElementById('course-description').innerText = description;
+    document.getElementById('course-objectives').innerText = 'Objectives: ' + objectives;
+    document.getElementById('course-prerequisites').innerText = 'Prerequisites: ' + prerequisites;
+    document.getElementById('course-learning-outcomes').innerText = 'What You\'ll Learn: ' + learningOutcomes;
+
+    document.getElementById('course-details-modal').style.display = 'block';
+}
+
+function closeCourseDetails() {
+    document.getElementById('course-details-modal').style.display = 'none';
+}
+
+    
+
+    </script>
+</body>
+</html>
