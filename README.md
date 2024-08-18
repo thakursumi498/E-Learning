@@ -1,5 +1,8 @@
 E-Learning Platform
+![E-Learning](https://github.com/user-attachments/assets/1321d68d-e096-4332-8c76-cab7846d6a45)
+
 Overview
+
 Welcome to the E-Learning Platform! This application is designed to provide an interactive and comprehensive learning experience for students, educators, and institutions. Our platform offers a variety of educational tools, resources, and features to enhance learning and teaching processes.
 
 Features
